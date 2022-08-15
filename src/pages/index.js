@@ -69,53 +69,153 @@ const moreLinks = [
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
+// const IndexPage = () => (
+//   <Layout>
+//     <Seo title="Home" />
+//     <div className={styles.textCenter}>
+//       <StaticImage
+//         src="../images/example.png"
+//         loading="eager"
+//         width={64}
+//         quality={95}
+//         formats={["auto", "webp", "avif"]}
+//         alt=""
+//         style={{ marginBottom: `var(--space-3)` }}
+//       />
+//       <h1>
+//         Welcome to <b>Gatsby!</b>
+//       </h1>
+//       <p className={styles.intro}>
+//         <b>Example pages:</b>{" "}
+//         {samplePageLinks.map((link, i) => (
+//           <React.Fragment key={link.url}>
+//             <Link to={link.url}>{link.text}</Link>
+//             {i !== samplePageLinks.length - 1 && <> · </>}
+//           </React.Fragment>
+//         ))}
+//         <br />
+//         Edit <code>src/pages/index.js</code> to update this page.
+//       </p>
+//     </div>
+//     <ul className={styles.list}>
+//       {links.map(link => (
+//         <li key={link.url} className={styles.listItem}>
+//           <a
+//             className={styles.listItemLink}
+//             href={`${link.url}${utmParameters}`}
+//           >
+//             {link.text} ↗
+//           </a>
+//           <p className={styles.listItemDescription}>{link.description}</p>
+//         </li>
+//       ))}
+//     </ul>
+//     {moreLinks.map((link, i) => (
+//       <React.Fragment key={link.url}>
+//         <a href={`${link.url}${utmParameters}`}>{link.text}</a>
+//         {i !== moreLinks.length - 1 && <> · </>}
+//       </React.Fragment>
+//     ))}
+//   </Layout>
+// )
+
+function sayJY() {
+  alert("Jeremy Yoder")
+}
+
 const IndexPage = () => (
   <Layout>
-    <Seo title="Home" />
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
-    </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
+    {/* <h1 className="text-3xl font-bold underline">Hello world!</h1> */}
+    {/* <label htmlFor="firstName">First Name:</label>
+    <input type="text" id="firstName" className="inputFormat" />
+    <br></br>
+    <label htmlFor="lastName">Last Name:</label>
+    <input type="text" id="lasttName" className="inputFormat" />
+    <br></br>
+    <label htmlFor="age">Age:</label>
+    <input type="number" id="age" className="inputFormat w-20" />
+    <br></br>
+    <label htmlFor="years">Years:</label>
+    <input type="number" id="years" className="inputFormat w-20" /> */}
+    <div className="flex flex-col justify-between bg-yellow-300 sm:bg-green-400 border rounded py-2 px-2">
+      {/* Think of first one (default) as the mobile, which can be override with larger ones */}
+      <div className="dataFormat">
+        <div className="w-24">
+          <label className="labelChangeColor" htmlFor="firstName">
+            First Name:
+          </label>
+        </div>
+        <div className="left-5">
+          <input type="text" id="firstName" className="inputFormat" />
+        </div>
+      </div>
+      <div className="dataFormat">
+        <div className="w-24">
+          <label className="labelChangeColor" htmlFor="lastName">
+            Last Name:
+          </label>
+        </div>
+        <div>
+          <input type="text" id="lastName" className="inputFormat" />
+        </div>
+      </div>
+      <div className="dataFormat">
+        <div className="w-24">
+          <label className="labelChangeColor" htmlFor="age">
+            Age:
+          </label>
+        </div>
+        <div>
+          <input type="number" id="age" className="inputFormat w-20" />
+        </div>
+      </div>
+      <div className="dataFormat">
+        <div className="w-24">
+          <label className="labelChangeColor" htmlFor="years">
+            Years:
+          </label>
+        </div>
+        <div>
+          <input type="number" id="years" className="inputFormat w-20" />
+        </div>
+      </div>
+      <div className="flex h-4"></div>
+      <div>
+        <div className="flex content-center">
+          {/* Don't really use this type anymore */}
+          {/* <input
+            type="button"
+            value="Submit 1"
+            className="flex rounded-full btn-blue"
+            onClick={sayJY}
+          /> */}
+          <button className="flex rounded-full btn-blue" onClick={sayJY}>
+            Submit 2
+          </button>
+          <button
+            className="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+            onClick={sayJY}
           >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
+            Submit 3
+          </button>
+        </div>
+      </div>
+    </div>
+    <h1></h1>
+    <div className="grid grid-cols-4 gap-5 bg-green-300 sm:bg-purple-400 border rounded py-2 px-2">
+      <div className="gridCell">AAA</div>
+      <div className="gridCell">BBB</div>
+      <div className="gridCell">CCC</div>
+      <div className="gridCell">DDD</div>
+      <div className="gridCell col-span-2">EEE</div>
+      <div className="gridCell">FFF</div>
+      <div className="gridCell">GGG</div>
+      <div className="gridCell">HHH</div>
+      <div className="gridCell col-span-2 sm:col-span-1">III</div>
+      <div className="gridCell sm:col-span-2">JJJ</div>
+    </div>
+    <h1></h1>
+    <Link to="/page-2">Go to 2nd page</Link>
   </Layout>
 )
 

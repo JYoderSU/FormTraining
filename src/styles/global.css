@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* https://tailwindcss.com/docs/responsive-design */
+
+@layer components {
+    .inputFormat {
+        @apply border rounded py-1 px-2 mt-0 mb-1;
+        @apply bg-red-600;  /* Think of default as mobile */
+        @apply sm:bg-blue-600; /* ... and override them for larger than this minimum */
+    }
+    .dataFormat {
+        @apply flex flex-col sm:flex-row;
+    }
+    .gridCell {
+        @apply rounded py-1 px-2;
+        @apply bg-red-400;
+        @apply sm:bg-yellow-400;
+    }
+    .labelChangeColor {
+        /* @apply underline; */
+        /* @apply color: to-blue-600; */
+        @apply font-bold;
+        @apply text-blue-600;   /* Think of default as mobile... */
+        @apply sm:text-red-600; /* ... and override them for larger than this minimum */
+    }
+    button {
+        @apply bg-red-600 text-white p-2;
+    }
+    .sectionHeader {
+        @apply text-sm text-gray-400 uppercase
+    }
+    .sectionLine {
+        @apply mt-1 mb-2 invisible md:visible;
+    }
+    input, select, textarea {
+        @apply text-xs border py-1 px-2 w-full;
+        /* mt-2 mb-2 */
+        /* ml-2 */
+        /* w-full flex-1 */
+    }
+    label {
+        @apply text-xs w-full;
+    }
+    .divHeaderCell {
+        @apply p-2 w-full  ;
+    }
+    .divCell {
+        @apply p-2 w-full ;
+    }
+    .sectionSecondBlock {
+        @apply mt-6 lg:mt-0;
+    }
+    /* div {
+        @apply border;
+    } */
+  }
