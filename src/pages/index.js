@@ -69,74 +69,12 @@ const moreLinks = [
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
-// const IndexPage = () => (
-//   <Layout>
-//     <Seo title="Home" />
-//     <div className={styles.textCenter}>
-//       <StaticImage
-//         src="../images/example.png"
-//         loading="eager"
-//         width={64}
-//         quality={95}
-//         formats={["auto", "webp", "avif"]}
-//         alt=""
-//         style={{ marginBottom: `var(--space-3)` }}
-//       />
-//       <h1>
-//         Welcome to <b>Gatsby!</b>
-//       </h1>
-//       <p className={styles.intro}>
-//         <b>Example pages:</b>{" "}
-//         {samplePageLinks.map((link, i) => (
-//           <React.Fragment key={link.url}>
-//             <Link to={link.url}>{link.text}</Link>
-//             {i !== samplePageLinks.length - 1 && <> · </>}
-//           </React.Fragment>
-//         ))}
-//         <br />
-//         Edit <code>src/pages/index.js</code> to update this page.
-//       </p>
-//     </div>
-//     <ul className={styles.list}>
-//       {links.map(link => (
-//         <li key={link.url} className={styles.listItem}>
-//           <a
-//             className={styles.listItemLink}
-//             href={`${link.url}${utmParameters}`}
-//           >
-//             {link.text} ↗
-//           </a>
-//           <p className={styles.listItemDescription}>{link.description}</p>
-//         </li>
-//       ))}
-//     </ul>
-//     {moreLinks.map((link, i) => (
-//       <React.Fragment key={link.url}>
-//         <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-//         {i !== moreLinks.length - 1 && <> · </>}
-//       </React.Fragment>
-//     ))}
-//   </Layout>
-// )
-
 function sayJY() {
   alert("Jeremy Yoder")
 }
 
 const IndexPage = () => (
   <Layout>
-    {/* <h1 className="text-3xl font-bold underline">Hello world!</h1> */}
-    {/* <label htmlFor="firstName">First Name:</label>
-    <input type="text" id="firstName" className="inputFormat" />
-    <br></br>
-    <label htmlFor="lastName">Last Name:</label>
-    <input type="text" id="lasttName" className="inputFormat" />
-    <br></br>
-    <label htmlFor="age">Age:</label>
-    <input type="number" id="age" className="inputFormat w-20" />
-    <br></br>
-    <label htmlFor="years">Years:</label>
-    <input type="number" id="years" className="inputFormat w-20" /> */}
     <div className="flex flex-col justify-between bg-yellow-300 sm:bg-green-400 border rounded py-2 px-2">
       {/* Think of first one (default) as the mobile, which can be override with larger ones */}
       <div className="dataFormat">

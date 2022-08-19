@@ -19,8 +19,6 @@
         @apply sm:bg-yellow-400;
     }
     .labelChangeColor {
-        /* @apply underline; */
-        /* @apply color: to-blue-600; */
         @apply font-bold;
         @apply text-blue-600;   /* Think of default as mobile... */
         @apply sm:text-red-600; /* ... and override them for larger than this minimum */
@@ -28,9 +26,18 @@
     button {
         @apply bg-red-600 text-white p-2;
     }
-    .sectionHeader {
+    /* This was old one when used labels for headers  */
+    /* .sectionHeader {
         @apply text-sm text-gray-400 uppercase
+    } */
+    /* This is new one to use for with h1 (heading) tags */
+    .sectionHeader {
+        @apply text-sm text-gray-400 uppercase mb-2
     }
+    /* Considered using this for section headers but went other direction */
+    /* h2 {
+         @apply text-sm text-gray-400 uppercase mb-2 
+    } */
     .sectionLine {
         @apply mt-1 mb-2 invisible md:visible;
     }
@@ -43,9 +50,10 @@
     label {
         @apply text-xs w-full;
     }
-    .divHeaderCell {
+    /* This bit was throwing off the flex stuff trying to do in the header */
+    /* .divHeaderCell {
         @apply p-2 w-full  ;
-    }
+    } */
     .divCell {
         @apply p-2 w-full ;
     }
