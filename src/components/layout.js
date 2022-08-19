@@ -29,7 +29,8 @@ const Layout = ({ children }) => {
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
+          // JDY: Removed below line so can extend to edges of browser window
+          //maxWidth: `var(--size-content)`,
           padding: `var(--size-gutter)`,
         }}
       >
